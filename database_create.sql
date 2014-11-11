@@ -1,4 +1,6 @@
-USE hackathon-marsrovers;
+CREATE DATABASE hackathon_marsrovers;
+
+USE hackathon_marsrovers;
 
 CREATE TABLE lastSol (
 	meraSol int not null,
@@ -27,3 +29,5 @@ CREATE TABLE userSubmissions (
 	PRIMARY KEY (id)
 );
 
+CREATE USER 'roveruser'@'localhost' IDENTIFIED BY 'wqeindsa235';
+GRANT select,insert,update,delete on hackathon_marsrovers.* to roveruser@'localhost' identified by 'wqeindsa235';
